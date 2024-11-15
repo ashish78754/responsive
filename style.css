@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow: hidden;
+}
+
 nav{
     width: 100%;
     height: 80px;
@@ -23,6 +27,7 @@ nav ul{
 
 i{
     display: none;
+    cursor: pointer;
 }
 
 main{
@@ -39,6 +44,40 @@ main{
 
 main h1{
     font-size: 5vw;
+}
+
+#full{
+    display: none;
+    height: 50vh;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.449);
+    position: absolute;
+    top:10px;
+    right: -300px;
+    z-index: 9;
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+
+}
+
+.list2{
+    list-style: none;
+    margin: 70px 0px;
+}
+
+.list2 li{
+    margin: 20px;
+    font-size:x-large;
+    font-weight: 600;
+}
+
+#full i{
+    padding: 7px;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    background-color: white;
+    border-radius: 45%;
 }
 
 .box{
@@ -72,6 +111,9 @@ footer{
         display: none;
     }
     i{
+        display: block;
+    }
+    #full{
         display: block;
     }
 }

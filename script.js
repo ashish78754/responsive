@@ -1,4 +1,8 @@
+let menu=document.querySelector("#menu i")
+let cross=document.querySelector("#full i")
+
 var tl = gsap.timeline();
+var tl2 = gsap.timeline();
 
 if (window.matchMedia("(max-width: 600px)").matches) {
     tl.from("#logo", {
@@ -28,7 +32,34 @@ if (window.matchMedia("(max-width: 600px)").matches) {
         stagger: 0.1
     });
 
-} else {
+        tl2.to("#full",{
+        right:0,
+        duration:0.5
+    });
+
+    tl2.from("#full li",{
+        x:100,
+        duration:0.5,
+        stagger:0.25,
+        opacity:0
+    });
+
+    tl2.from("#full i",{
+        duration:0.3,
+        opacity:0
+    });
+
+    tl2.pause();
+
+    menu.addEventListener("click",function(){
+        tl2.play();
+    })
+    
+    cross.addEventListener("click",function(){
+        tl2.reverse();
+    })
+} 
+else {
     tl.from("#logo", {
         y: -30,
         opacity: 0,

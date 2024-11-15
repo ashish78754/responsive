@@ -32,7 +32,7 @@ if (window.matchMedia("(max-width: 600px)").matches) {
         stagger: 0.1
     });
 
-        tl2.to("#full",{
+    tl2.to("#full",{
         right:0,
         duration:0.5
     });
